@@ -5,7 +5,7 @@ O sistema carrega imagens randomicamente e exibe para o usuario votar com sua op
 
 <p align="center">
   <img src="/static/img/django-vote.png" width="350" title="default">
-  <img src="/static/img/sis2.png" width="600" title="sis2">
+  <img src="/static/img/sis2.png" width="1000" title="sis2">
 </p>
 
 ## Instalação
