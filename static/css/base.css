@@ -1,0 +1,39 @@
+h1 {
+ font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+ font-size: 59px;
+ line-height: 60px;
+}
+ 
+p {
+ font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+ font-size: 20px;
+ line-height: 25px;
+ margin-top: 15px;
+}
+
+.navbar {
+font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+background: transparent !important;
+}
+
+body {
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+}
+
+#logout{
+    font-size: 18px;
+}
+
+#sair{
+    position: absolute;
+    right: 1%;
+}
+
+#name{
+    position: absolute;
+    font-size: 12px;
+}
+#email{
+    position: absolute;
+    font-size: 11px;
+}

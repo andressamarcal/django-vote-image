@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{%if user.is_authenticated%}
+			
+			<br>
+			<div class="container-fluid container-style" align="center">
+			
+			<div class="image" id=name_img>
+				<label> {{filename}} </label>
+				<br>
+                <img src="{{ url }}" width=50% height=auto>
+			</div>
+			
+			<div style="text-align: center;">
+			</p>
+				<i class="fas fa-thumbs-up icon-style icon-conformed" data-toggle="tooltip" data-placement="top" title="Conforme" id="conforme" name='conforme'></i>
+				<i class="fas fa-minus-circle icon-style icon-neutral" data-toggle="tooltip" data-placement="top" title="Neutro" id="neutro" name='neutro'></i>
+				<i class="fas fa-thumbs-down icon-style icon-nconformed" data-toggle="tooltip" data-placement="top" title="Não Conforme" id="naoconforme" name='naoconforme'></i>
+			</div>
+
+			<div style="text-align: center; margin-bottom: -10%;">
+				<label style="margin-top: 3%; margin-right: 2%; color: gray;"> 
+				<span id='c_count_user'>{{user.username|title}}:</span>
+				<span id='c_user_conf'>Conforme: <b>{{total_user_positive}}</b></span>
+				<span id='c_user_neutro'>	Neutro: <b>{{total_user_neutral}}</b></span>
+				<span id='c_user_n_conf'>	Não Conforme: <b>{{total_user_negative}}</b></span>
+				<br>
+				<span id='c_global'>BD:</span>
+				<span id='c_gobal_conf'>Conforme: <b>{{total_global_positive}}</b></span>
+				<span id='c_global_neutro'>	Neutro: <b>{{total_global_neutral}}</b></span>
+				<span id='c_n_global_conf'>	Não Conforme: <b>{{total_global_negative}}<b></span>
+				</label>
+			</div>
+		</div>
+		
+		<form method='post' id='form'>
+		{% csrf_token %}
+		</form>
+
+{% else %}
+
+{% comment %} {%if not user.is_authenticated%} {% endcomment %}
+
+<br>
+<div style='text-align: center;'>
+<p style='font-size:25px;'>Você não esta logado.</p>
+<a href="{% url 'login' %}"> Clique aqui para efetuar login</a>
+</div>
+
+{% endif %}
+
+<script>
+
+$('#neutro').click(function(){
+	$("#form").append('<input type="hidden" name="vote" value="0">' + '<input type="hidden" name="filename" value="{{filename}}">').submit();
+	//$('#c_neutro').html('Neutro: ' +{{qs_count_negative}});
+  });
+
+$('#conforme').click(function(){
+	$("#form").append('<input type="hidden" name="vote" value="1">' + '<input type="hidden" name="filename" value="{{filename}}">').submit();
+  });
+
+ $('#naoconforme').click(function(){
+	$("#form").append('<input type="hidden" name="vote" value="-1">' + '<input type="hidden" name="filename" value="{{filename}}">').submit();    
+  }); 
+   
+</script>
+
+{% endblock content %}

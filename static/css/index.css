@@ -1,0 +1,57 @@
+.container-style
+{
+	background-color: white;
+	padding-bottom: 10%;
+}
+
+.img-label 
+{
+	display: block;
+	margin: auto;
+	width: 750px;
+	height: auto;
+}
+
+.icon-style
+{
+	margin-top: 3%;
+	margin-right: 3%;
+	font-size: 50px;
+	display: inline-block;
+	text-align: center;
+}
+
+.icon-conformed
+{
+	color: green;
+}
+
+.icon-nconformed
+{
+	color: red;
+}
+
+.icon-neutral
+{
+	color: blue;
+}
+
+#c_global, #c_count_user{
+	font-size: 16px;
+	color: black;
+}
+
+#name_img{
+	color: gray;
+	font-size: 14px;
+	margin-top: 3%;
+	margin-right: 2%;
+}
+
+#c_user_conf, #c_user_neutro, #c_user_n_conf{
+	font-size: 16px;	
+}
+
+#c_gobal_conf, #c_global_neutro, #c_n_global_conf{
+	font-size: 16px;
+}
