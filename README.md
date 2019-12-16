@@ -3,7 +3,7 @@
 
 O sistema carrega imagens randomicamente e exibe para o usuario votar com sua opinião, podendo votar como Negativo, Positivo ou Neutro. As imagens exibidas deverão ser as que devem estar disponíveis para votação do usuario.
 
-![](.../django_vote_image/static/img/django-vote.png)
+![](/django_vote_image/static/img/django-vote.png)
 
 ## Instalação
 
