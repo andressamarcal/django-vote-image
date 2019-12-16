@@ -5,6 +5,11 @@ O sistema carrega imagens randomicamente e exibe para o usuario votar com sua op
 
 ![](/static/img/django-vote.png)
 
+<p align="center">
+  <img src="/static/img/django-vote.png" width="350" title="hover text">
+  <img src="/static/img/django-vote.png" width="350" alt="accessibility text">
+</p>
+
 ## Instalação
 
 ```sh
