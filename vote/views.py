@@ -4,7 +4,7 @@ import random
 
 from urllib3 import request
 
-from app.models import Template
+from vote.models import Template
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
