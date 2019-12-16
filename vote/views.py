@@ -22,7 +22,7 @@ class ImageList(TemplateView):
         templates = Template.objects.all()
 
         filename = self.image_not_used(templates, current_user)
-        url = 'http://pesquisa.eastus.cloudapp.azure.com:80/media/incar/'+filename
+        url = '/media/vote/'+filename
         context = {
             'url': url,
             'filename': filename,
@@ -38,7 +38,7 @@ class ImageList(TemplateView):
 
     def filename(self):
         list_files = glob(
-            '/home/vsoft/BPOnlineImageAnnotation/media/incar/*.jpg')
+            '/home/andressa/Documentos/django_vote_image/media/vote/*.jpg')
         random_file = random.choice(list_files)
         filename = os.path.basename(random_file)
 
